@@ -26,9 +26,12 @@ This repository contains the source code and assets for the website design proje
 - Bootstrap Framework
 - JavaScript 
 
+## View Website
+To view and interact with this website, [Click here](https://thenumber1boss.github.io/icandit-dynamic-consult/)
+
 ## Contact
 
 For inquiries about this project or Icandit Dynamic Consult, please contact:
 
-- [Icandit Dynamic Consult Website](https://www.icanditconsult.com)
-- Email: contact@icanditconsult.com
+- [Email](oladelebamijoko@gmail.com)
+- [whats-app](https://wa.me/+2348036477603)
