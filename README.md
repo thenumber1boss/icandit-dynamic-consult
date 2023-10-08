@@ -1,2 +1,34 @@
-# icandit-dynamic-consult
-A bootstrap framework website design project for Icandit Dynamic Consult, an educational company located in Abuja, Nigeria.
+# Icandit Dynamic Consult Website Design Project
+
+## Overview
+
+This repository contains the source code and assets for the website design project created for Icandit Dynamic Consult, an educational company based in Abuja, Nigeria. The website is built using the Bootstrap framework to provide a responsive and visually appealing online presence for the organization.
+
+## Project Description
+
+- **Client**: Icandit Dynamic Consult
+- **Location**: Abuja, Nigeria
+
+## Features
+
+- Responsive design for optimal viewing on various devices, including desktops, tablets, and smartphones.
+- Modern and user-friendly interface to enhance user experience.
+- Clear navigation and structured layout for easy access to information.
+- Integration of Bootstrap components and CSS for a consistent and visually appealing design.
+- Optimized performance and fast loading times.
+- Compatibility with major web browsers.
+- Customized styling to reflect the branding and identity of Icandit Dynamic Consult.
+
+## Technologies Used
+
+- HTML5
+- CSS3
+- Bootstrap Framework
+- JavaScript 
+
+## Contact
+
+For inquiries about this project or Icandit Dynamic Consult, please contact:
+
+- [Icandit Dynamic Consult Website](https://www.icanditconsult.com)
+- Email: contact@icanditconsult.com
