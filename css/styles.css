@@ -279,15 +279,15 @@ video {
 
 /* Background images for different curriculums */
 .nigerian-curriculum {
-    background-image: url('/img/ng-curriculum-bg.png');
+    background-image: url('../img/ng-curriculum-bg.png');
 }
 
 .uk-curriculum {
-    background-image: url('/img/uk-curriculum-bg.png');
+    background-image: url('../img/uk-curriculum-bg.png');
 }
 
 .usa-curriculum {
-    background-image: url('/img/us-curriculum-bg.png');
+    background-image: url('../img/us-curriculum-bg.png');
 }
 
 /* Background images for different curriculums */
