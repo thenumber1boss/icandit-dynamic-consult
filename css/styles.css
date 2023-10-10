@@ -154,9 +154,10 @@ p {
     transition: transform 0.3s, box-shadow 0.3s;
 }
 
-.service-item:hover {
+.service-item:hover,
+.curriculum-item:hover {
     transform: translateY(-5px);
-    box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.2);
+    box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.4);
 }
 
 /* Style the Font Awesome icon */
@@ -209,6 +210,14 @@ p {
 
 
 /* CSS for the Exam Coaching Section */
+.exam-coaching-section {
+    padding: 5px;
+}
+
+.exam-coaching {
+    border: solid #0078C9 0.1px;
+    border-radius: 5px;
+}
 
 .exam-coaching-content {
     padding: 50px 20px 20px 20px;
@@ -243,6 +252,93 @@ p {
 video {
     max-width: 100%; /* Ensure the video doesn't exceed its container's width */
 }
+
+
+/* CSS for Curriculum Section */
+.curriculum-offered {
+    padding: 80px 0;
+    background-color: #f8f8f8;
+}
+
+.curriculum-item {
+    position: relative;
+    text-align: center;
+    padding: 30px;
+    border-radius: 5px;
+    min-height: 350px; /* Ensure a minimum height for the items */
+    overflow: hidden;
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.curriculum-item .fas {
+    font-size: 35px;
+    color: #152951;
+    position: relative;
+    z-index: 3;
+}
+
+/* Background images for different curriculums */
+.nigerian-curriculum {
+    background-image: url('/img/ng-curriculum-bg.png');
+}
+
+.uk-curriculum {
+    background-image: url('/img/uk-curriculum-bg.png');
+}
+
+.usa-curriculum {
+    background-image: url('/img/us-curriculum-bg.png');
+}
+
+/* Background images for different curriculums */
+.nigerian-curriculum,
+.uk-curriculum,
+.usa-curriculum {
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    min-height: 100%; /* Set minimum height to 100% for full coverage */
+    position: relative; /* Ensure relative positioning for the pseudo-element */
+}
+
+/* Pseudo-element for the overlay */
+.curriculum-item::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(255, 255, 255, 0.8);
+    z-index: 1;
+}
+
+/* Text styles */
+.curriculum-title {
+    font-size: 24px;
+    font-weight: 700;
+    margin-top: 20px;
+    color: #0078C9;
+    position: relative;
+    z-index: 2;
+}
+
+.curriculum-description {
+    font-size: 16px;
+    margin-top: 20px;
+    color: rgba(0, 0, 0, 1); /* Text color for contrast */
+    position: relative; /* Add relative positioning for stacking context */
+    z-index: 2; /* Place the text above the overlay */
+}
+
+/* Media query for responsiveness */
+@media (max-width: 767px) {
+    .curriculum-item {
+        margin-bottom: 30px;
+    }
+}
+
+
 
 
 /* Default styles for larger screens */
@@ -280,6 +376,20 @@ video {
     border-radius: 5px;
     box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.5);
 }
+
+/* CSS for published book cards */
+.fixed-height {
+    height: 400px;
+}
+
+
+.book-card img {
+    display: block;
+    margin: 0 auto;
+    max-height: 100%;
+    animation: pulse 4s infinite;
+}
+
 
 /* CEO Summary Section */
 
