@@ -134,5 +134,136 @@ document.addEventListener("DOMContentLoaded", function () {
         }
     });
 
+ // Unmute intro video
+const video = document.getElementById('myVideo');
+const unmuteButton = document.getElementById('unmute');
+
+// Unmute research video
+const researchVideo = document.getElementById('researchVideo');
+const researchUnmuteButton = document.getElementById('unmuteResearch');
+
+unmuteButton.addEventListener('click', () => {
+  video.muted = !video.muted;
+  unmuteButton.style.display = 'none';
+});
+
+researchUnmuteButton.addEventListener('click', () => {
+  researchVideo.muted = !researchVideo.muted;
+  researchUnmuteButton.style.display = 'none';
+});
+
+// Set up Intersection Observer for intro video
+const observer = new IntersectionObserver(
+  entries => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        video.play();
+        observer.unobserve(video); // Stop observing the video once it has been played
+      } else if (entry.target === video && entry.intersectionRatio <= 0 && video.ended) {
+        // Check if the video has ended and the button is still visible
+        unmuteButton.style.display = 'none';
+      }
+    });
+  },
+  { threshold: 0.5 } // Adjust the threshold as needed
+);
+
+// Observe the intro video element
+observer.observe(video);
+
+// Listen for the intro video end event
+video.addEventListener('ended', () => {
+  // Check if the unmute button is still visible when the video ends
+  if (unmuteButton.style.display !== 'none') {
+    unmuteButton.style.display = 'none';
+  }
+});
+
+// Set up Intersection Observer for research video
+const researchObserver = new IntersectionObserver(
+  entries => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        researchVideo.play();
+        researchObserver.unobserve(researchVideo); // Stop observing the video once it has been played
+      } else if (entry.target === researchVideo && entry.intersectionRatio <= 0 && researchVideo.ended) {
+        // Check if the video has ended and the button is still visible
+        researchUnmuteButton.style.display = 'none';
+      }
+    });
+  },
+  { threshold: 0.5 } // Adjust the threshold as needed
+);
+
+// Observe the research video element
+researchObserver.observe(researchVideo);
+
+// Listen for the research video end event
+researchVideo.addEventListener('ended', () => {
+  // Check if the unmute button is still visible when the video ends
+  if (researchUnmuteButton.style.display !== 'none') {
+    researchUnmuteButton.style.display = 'none';
+  }
+});
+
+
+function smoothScroll(targetId) {
+    const targetElement = document.getElementById(targetId);
+
+    if (targetElement) {
+        const scrollTime = getComputedStyle(document.documentElement).getPropertyValue('--scroll-time');
+        targetElement.scrollIntoView({
+            behavior: 'smooth',
+            block: 'start',
+            inline: 'nearest'
+        });
+
+        // Delay scroll time for better effect
+        setTimeout(() => {
+            targetElement.scrollIntoView({
+                behavior: 'smooth',
+                block: 'start',
+                inline: 'nearest'
+            });
+        }, parseFloat(scrollTime) * 1000);
+    }
+}
+function updateActiveClass(targetId) {
+    const navLinks = document.querySelectorAll('.navbar-nav .nav-link');
+
+    // Remove active class from all menu items
+    navLinks.forEach(link => {
+        link.classList.remove('active');
+    });
+
+    // Add active class to the clicked menu item
+    const clickedLink = document.querySelector(`.navbar-nav .nav-link[href="#${targetId}"]`);
+    if (clickedLink) {
+        clickedLink.classList.add('active');
+    }
+}
+
+// Add an event listener for when scrolling is finished
+window.addEventListener('scroll', function () {
+    // Update the active class based on the currently visible section
+    const sections = document.querySelectorAll('section');
+    let found = false;
+
+    sections.forEach(section => {
+        const rect = section.getBoundingClientRect();
+        const isInViewport = (rect.top <= window.innerHeight / 2) && (rect.bottom >= window.innerHeight / 2);
+
+        if (isInViewport && !found) {
+            const targetId = section.id;
+            updateActiveClass(targetId);
+            found = true; // Set to true to update active class only for the first visible section
+        }
+    });
+});
+
+
+
+
+
 
 });

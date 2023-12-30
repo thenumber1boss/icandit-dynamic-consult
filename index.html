@@ -20,6 +20,7 @@
 <body>
 
 <!-- Navbar -->
+<header>
 <nav class="navbar navbar-expand-lg navbar-light bg-light">
     <a class="navbar-brand" href="#">
         <img src="img/logo.png" alt="Your Logo" class="logo-image">
@@ -30,24 +31,25 @@
     </button>
     <div class="collapse navbar-collapse" id="navbarNav">
         <ul class="navbar-nav ml-auto">
-            <li class="nav-item active">
+            <li class="nav-item">
                 <a class="nav-link" href="#">Home</a>
             </li>
             <li class="nav-item">
-                <a class="nav-link" href="#">Services</a>
+                <a class="nav-link" href="#services">Services</a>
             </li>
             <li class="nav-item">
-                <a class="nav-link" href="#">About</a>
+                <a class="nav-link" href="#about-section">About</a>
             </li>
             <li class="nav-item">
-                <a class="nav-link" href="#">Contact</a>
+                <a class="nav-link" href="#contact">Contact</a>
             </li>
             <li class="nav-item">
-                <a class="quote" href="#">Free Consultation</a>
+                <a class="quote" onclick="location.href='tel:+2348036477603'">Free Consultation</a>
             </li>
         </ul>
     </div>
 </nav>
+</header>
 
 <!-- Hero Section -->
 <section class="hero">
@@ -61,7 +63,7 @@
 </section>
 
 <!-- Services Section -->
-<section class="services">
+<section id="services" class="services">
     <div class="container">
         <div class="row">
             <div class="col-lg-4">
@@ -111,7 +113,7 @@
         <div class="row">
             <div class="col-lg-6">
                 <div class="about-image">
-                    <img src="img/about.png" alt="About Us" class="img-fluid scroll-reveal-left">
+                    <img src="img/about.png" alt="About Us" class="img-fluid scroll-reveal-up">
                 </div>
             </div>
             <div class="col-lg-6">
@@ -133,7 +135,7 @@
     </div>
 </section>
 
-<section class="statistics">
+<section id="statistics" class="statistics">
     <div class="container">
         <div class="row">
             <div class="col-md-3">
@@ -165,7 +167,7 @@
 </section>
 
 
-<section class="exam-coaching-section" style="background-image: url('img/exam-coaching-bg.jpg');">
+<section id="coaching" class="exam-coaching-section" style="background-image: url('img/exam-coaching-bg.jpg');">
     <div class="container exam-coaching">
         <div class="row">
             <div class="col-md-6">
@@ -174,7 +176,7 @@
                     <p class="description scroll-reveal-up">
                         Looking for a tutor to ace your examinations or to help your child succeed? Our experienced coaches specialize in the following examinations:
                     </p>
-                    <ul class="examinations-list scroll-reveal-left">
+                    <ul class="examinations-list scroll-reveal-up">
                         <li> IGSCE</li>
                         <li> SAT</li>
                         <li> JAMB</li>
@@ -188,10 +190,11 @@
                     </p>
                 </div>
             </div>
-            <div class="col-md-6">
+            <div class="col-md-6 video-container">
                 <div class="video-container">
-                    <video controls width="100%">
-                        <source src="your-video.mp4" type="video/mp4">
+                    <div class="unmute-audio" id="unmute"><img src="img/volume.png"></div>
+                    <video id="myVideo" width="100%" muted>
+                        <source src="img/icandit-intro-vid.mp4" type="video/mp4">
                         Your browser does not support the video tag.
                     </video>
                 </div>
@@ -200,11 +203,11 @@
     </div>
 </section>
 
-<section class="curriculum-offered">
+<section id="Curriculum" class="curriculum-offered">
     <div class="container">
         <h2 class="section-heading">Curriculums Offered</h2>
         <div class="row">
-            <div class="col-lg-4 mb-3 scroll-reveal-left">
+            <div class="col-lg-4 mb-3 scroll-reveal-up">
                 <div class="curriculum-item nigerian-curriculum">
                     <i class="fas fa-university"></i> <!-- Icon for Nigerian curriculum -->
                     <h3 class="curriculum-title ">Nigerian Curriculum</h3>
@@ -218,7 +221,7 @@
                     <p class="curriculum-description scroll-reveal-up">Aligned with the British curriculum to help international students excel in international examinations.</p>
                 </div>
             </div>
-            <div class="col-lg-4 mb-3 scroll-reveal-right">
+            <div class="col-lg-4 mb-3 scroll-reveal-up">
                 <div class="curriculum-item usa-curriculum">
                     <i class="fas fa-university"></i> <!-- Icon for USA curriculum -->
                     <h3 class="curriculum-title">USA Curriculum</h3>
@@ -232,12 +235,16 @@
 
 
 <!-- Writing and Publishing Section -->
-<section class="writing-publishing" style="margin-bottom: 100px;">
+<section id="research" class="writing-publishing" style="margin-bottom: 100px;">
     <div class="container writing-container mb-5" style="background-image: url('img/bg-writing.png');">
         <div class="row">
-             <div class="col-lg-6">
-                <div class="writing-publishing-image">
-                    <img src="img/writing.png" alt="Writing and Publishing" class="img-fluid scroll-reveal-left">
+                <div class="col-md-6 video-container">
+                    <div class="video-container">
+                        <div class="unmute-audio" id="unmuteResearch"><img src="img/volume.png"></div>
+                        <video id="researchVideo" width="100%" muted>
+                            <source src="img/icandit-research-wk-video.mp4" type="video/mp4">
+                            Your browser does not support the video tag.
+                        </video>
                 </div>
             </div>
             <div class="col-lg-6">
@@ -253,7 +260,7 @@
     </div>
 </section>
 
-<section class="books-section mt-5">
+<section id="books" class="books-section mt-5">
     <div class="container">
         <h2 class="section-heading mb-5 mt-5">Our Books and Publications</h2>
         <div class="row">
@@ -282,14 +289,14 @@
 
 
 
-<section class="ceo-summary">
+<section id="ceoSummary" class="ceo-summary">
     <div class="container ceo-summary-container">
       <h2 class="section-heading">The Visionary</h2>
         <div class="row">
-            <div class="col-lg-6">
+            <div class="col-lg-6 img-main">
               <div class="ceo-image-container">
-                <img src="img/kenny.jpg" alt="CEO Image" class="ceo-image scroll-reveal-up">
-                <div class="ceo-details scroll-reveal-down">
+                <img src="img/ceo1.jpg" alt="CEO Image" class="ceo-image scroll-reveal-up">
+                <div class="ceo-details scroll-reveal-up">
                   <h3 class="ceo-name">Bamijoko Oladele Opeyemi</h3>
                     <h4 class="ceo-qualifications">B.Sc (Ed) Mathematics, M.ED. Science Education, Microsoft Certification in Education (MIE)</h4>
                   </div>
@@ -300,7 +307,6 @@
                     <p class="ceo-overview scroll-reveal-up">
                         Bamijoko Oladele Opeyemi is an accomplished educationist with a wealth of experience in teaching and research. He brings a unique blend of expertise to the world of education. As the CEO and Lead Consultant of Icandit Dynamic Consult, Mr. Bamijoko is dedicated to empowering learners and helping them achieve academic excellence.
                     </p>
-                     <a href="about.html" class="btn btn-primary scroll-reveal-up">Learn More</a>
                    </div>
             </div>
         </div>
@@ -310,13 +316,13 @@
 
 
 <!-- Contact Us Section -->
-<section class="contact">
+<section id="contact" class="contact">
     <div class="container">
         <div class="row">
             <!-- Contact Form -->
             <div class="col-lg-6">
                 <h2 class="section-heading">Contact Us</h2>
-                <form class="contact-form scroll-reveal-left">
+                <form class="contact-form scroll-reveal-up">
                     <div class="form-group">
                         <input type="text" class="form-control" placeholder="Your Name" required>
                     </div>
@@ -331,11 +337,11 @@
             </div>
             <!-- Contact Information -->
             <div class="col-lg-6">
-              <div class="card-body scroll-reveal-right">
+              <div class="card-body scroll-reveal-up">
                 <h2 class="contact-heading">Contact Information</h2>
                 <address>
-                    <p><strong>Address:</strong> 123 Efab Estate, Abuja, Nigeria</p>
-                    <p><strong>Phone:</strong> +2348100000000</p>
+                    <p><strong>Address:</strong>Suite C10, Busymart Plaza, No. 44 Ebitu Ukiwe st, Jabi Abuja</p>
+                    <p><strong>Phone:</strong> +2349021603951</p>
                     <p><strong>Email:</strong> info@icandit.com</p>
                 </address>
                 <h2 class="section-heading">Follow Us</h2>
@@ -346,6 +352,7 @@
                 </ul>
             </div>
         </div>
+    </div>
     </div>
 </section>
 
