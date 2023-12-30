@@ -30,8 +30,9 @@ header {
     
     background: linear-gradient(to right, #fff -80%, #152951); 
     color: white;
-    height: 100px;
     padding-left: 50px;
+    padding-top: 30px;
+    padding-bottom: 30px;
     padding-right: 50px;
 }
 /* Navbar link styles */
@@ -621,9 +622,4 @@ footer a:hover {
       .unmute-audio img {
         width: 20px;
       }
-
-      .navbar {
-        padding-left: 20px;
-        padding-right: 20px;
-    }
 }
