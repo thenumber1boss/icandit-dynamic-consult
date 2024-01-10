@@ -1,0 +1,188 @@
+body,
+html {
+   margin: 0;
+   padding: 0; 
+   width: 100%;
+   height: 100%;
+}
+
+h1, h2, h3, h4, h5, h6, p {
+    margin-top: 0;
+    padding-top: 0;
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background-color: #ffffff;
+}
+
+
+
+.is-form {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    height: 100%;
+    align-items: center;
+    justify-content: center;
+    padding: 20px;
+  }
+
+  form {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    width: 100%;
+    height: 100%;
+    align-items: center;
+    background-color: #fff;
+}
+
+.form-step {
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+.form-element-padding {
+    padding: 20px;
+}
+
+.form-step label {
+    display: flex;
+    text-align: center;
+    padding: 0 30px;
+}
+
+
+
+input {
+    width: 200px;
+    padding: 10px;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.2);
+    border-radius: 4px;
+    border: none;
+}
+
+/* Add this style to target the dynamically created student details divs */
+#studentDetails,
+#studentNames {
+    padding: 20px;
+    display: flex;
+    max-height: 400px;
+    overflow-y: auto;
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .student-details label {
+    margin-bottom: 5px;
+  }
+
+  .student-details input {
+    margin-bottom: 20px;
+  }
+  
+  .student-info-fields {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 30px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+    margin: 15px 0;
+  }
+
+
+
+  /* Add this style to target the student details input fields */
+  .student-info-fields label {
+    margin-bottom: 5px;
+  }
+
+  .student-info-fields input {
+    margin-bottom: 20px;
+  }
+  
+  /* Add this style to target the submit message div */
+  #thankYouMessage {
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+  }
+  
+
+  
+.buttons {
+    display: flex;
+    width: 300px;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    gap: 150px;
+}
+
+button {
+    font-size: 16px;
+    padding: 5px 10px;
+    border-radius: 5px;
+    border: none;
+    background-color: #152951;
+    color: #fff;
+    cursor: pointer;
+    transition: 0.2s ease;
+}
+
+button:hover {
+    background-color: #1e3666;
+    box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+}
+#nextBtn {
+    margin-left: auto;
+}
+
+#prevBtn[disabled] {
+    display: none;
+}
+
+textarea {
+    max-width: 200px;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.2);
+    border: 1px solid #ccc;
+    border-radius: 3px;
+}
+
+select {
+    padding: 4px 10px;
+    border-radius: 4px;
+    border: 1px solid #ccc;
+    cursor: pointer;
+}
+
+/* Footer Styles */
+footer {
+    font-size: 15px;
+    padding: 20px;
+}
+
+
+footer a {
+    color: maroon;
+    font-weight: 700;
+    letter-spacing: -0.2px;
+    text-shadow: 0.5px 1px 1px #000;
+    text-decoration: none;
+}
+
+footer a:hover {
+    text-decoration: none;
+}
