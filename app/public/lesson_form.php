@@ -3,10 +3,42 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Client Form for Lesson</title>
+  <title>Lesson Request Form for Client</title>
+
+  <link rel="icon" href="img/icandit-fav.png" type="image/x-icon">
   <link rel="stylesheet" href="css/form.css">
+
+   <!-- Bootstrap CSS link here -->
+   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <!-- Add animate.css for text animations -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css">
+
+
 </head>
 <body>
+
+<div class="request-form-body">
+
+    <!-- Navbar -->
+    <header>
+        <nav class="navbar navbar-expand-lg navbar-light bg-light">
+            <a class="navbar-brand" href="index.html">
+                <img src="img/logo.png" alt="Your Logo" class="logo-image">
+            </a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav"
+                    aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ml-auto">
+                    <li class="nav-item">
+                        <a class="quote" onclick="location.href='https://wa.me/+2349021603951'">Free Consultation</a>
+                    </li>
+                </ul>
+            </div>
+        </nav>
+    </header>
   
   <div class="is-form">
 <form id="lessonForm" method="post" action="submit_lesson_form.php">
@@ -54,6 +86,7 @@
     <div><label for="lessonMode">What Mode Of Tutoring Is Most Suitable To You:</label></div>
     <div class="form-element-padding">
         <select id="lessonMode" name="lessonMode">
+        <option value="" disabled selected>Select an option</option>
             <option value="Online">Online</option>
             <option value="Physical">Physical</option>
             <option value="Hybrid">Hybrid</option>
@@ -91,6 +124,14 @@
   </div>
 </footer>
 
+            </div>
+
+            <!-- jQuery -->
+    <script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
+
+<!-- Bootstrap JS scripts -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
 <script src="js/lesson_form.js"></script>
 </body>
 </html>

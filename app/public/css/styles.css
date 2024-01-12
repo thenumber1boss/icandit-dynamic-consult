@@ -30,10 +30,7 @@ header {
     
     background: linear-gradient(to right, #fff -80%, #152951); 
     color: white;
-    padding-left: 50px;
-    padding-top: 30px;
-    padding-bottom: 30px;
-    padding-right: 50px;
+    padding: 30px 50px !important;
 }
 /* Navbar link styles */
 .navbar-nav .nav-item .nav-link {
